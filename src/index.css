@@ -1,0 +1,267 @@
+/* 1. Global Setup (Clean Background & Font) */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:#FDFBF7; /* Change this hex code to test! */
+  margin: 0;
+  padding: 20px;
+  color: #333; 
+}
+
+/* 2. The Search Bar Area */
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.search-input {
+  padding: 12px 20px;
+  font-size: 16px;
+  width: 300px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #ff6b6b; /* Reddish theme color */
+}
+
+.search-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #ff4757;
+}
+
+/* 3. The Grid Layout */
+.recipe-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 4. The Beautiful Recipe Card */
+.recipe-card {
+  background-color: white;
+  width: 250px;
+  border-radius: 15px;
+  overflow: hidden; /* Keeps the image inside the curved borders */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+/* The Hover Magic */
+.recipe-card:hover {
+  transform: translateY(-10px); /* Moves card slightly up */
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2); /* Deeper shadow on hover */
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Prevents image stretching */
+}
+
+.recipe-card h3 {
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+
+
+/* DETAILS UPGRADE  */
+
+.recipe-meta {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.badge {
+  background-color: #ebe6d6;
+  color: #d35400;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.ingredients-box {
+  background: rgb(202, 191, 191);
+  padding: 30px;
+  border: 2px solid #eee;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.ingredients-box h3 {
+  margin-top: 0;
+  color: #2f3542;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ff6b6b;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #142c8c;
+  font-size: 1.1rem;
+}
+
+.ingredient-item:last-child {
+  border-bottom: none; /* Removes the line from the very last item */
+}
+
+.ingredient-name {
+  font-weight: bold;
+  color: #2d2a2a;
+}
+
+.ingredient-measure {
+  color: #b72424;
+}
+
+
+/* 2. Main Centered Container with Constraints */
+.recipe-details-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.recipe-details-container {
+  background-color: white;
+  max-width: 600px; /* Constrains the width for a cleaner, focused look */
+  width: 90%; /* Responsive width */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  margin: 40px auto; /* Centers and adds spacing */
+}
+
+/* 3. Smaller, Centered, Styled Image */
+.details-image-section {
+  display: flex;
+  justify-content: center; /* Centers the image */
+  margin-bottom: 30px;
+}
+
+.details-image {
+  max-width: 400px; /* Limits the size of the image */
+  width: 100%; /* Responsive up to max-width */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for definition */
+}
+
+/* 4. Enhanced Instructions Section */
+.instructions-section {
+  background-color: #fffaf2; /* Slightly warmer, softer background */
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 6px solid #ff6b6b; /* Muted red decorative border accent */
+  margin-top: 30px;
+}
+
+.instructions-section h3 {
+  margin-top: 0;
+  color: #ff6b6b; /* Accent color for the section title */
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.instructions-text {
+  font-size: 1.1rem;
+  line-height: 1.7; /* Increased line height for much better readability */
+  color: #555; /* Subtler text color for instructions */
+}
+
+
+
+
+.youtube-btn {
+  display: block;
+  text-align: center;
+  background-color: #ff0000; /* YouTube Red */
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.youtube-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.18); /* Makes the button pop out slightly */
+}
+
+
+
+
+/* ---  Ingredients & Formatted Instructions --- */
+
+.ingredients-section {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.ingredients-section h3 {
+  color: #ff6b6b;
+  margin-top: 0;
+  border-bottom: 2px solid #f4f7f6;
+  padding-bottom: 10px;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f4f7f6;
+  color: #555;
+}
+
+.ingredient-item:last-child {
+  border-bottom: none;
+}
+
+.instructions-list {
+  padding-left: 20px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.instructions-list li {
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
